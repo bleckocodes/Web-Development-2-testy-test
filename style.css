@@ -1,0 +1,31 @@
+h1{
+    font-size: 24px;
+    color: rgb(240, 160, 20);  
+    font-size: bold;   
+    font-style: bolder;
+}
+.heading3{
+    color: blue;
+}
+.heading2{
+    font-size: 14px;
+}
+.box{
+    background-color: lightgrey;
+    
+    /* IMAGE CODE  */
+    background-image: url(images/cyber.jpg) ;
+    background-size: cover;
+    /* IMAGE CODE  */
+
+    margin: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: blueviolet;
+    padding: 20px;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+
+
+}
