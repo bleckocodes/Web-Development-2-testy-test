@@ -1,0 +1,65 @@
+<html>
+    <!-- ctrk + K + C for comments-->
+<head>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            console.log("Starting...");
+            const balert = function(x){
+                alert(x);
+            }
+            
+            const addsTen = function(x){
+                let total =  (x + 10);
+                document.getElementById('result').innerHTML = total;
+            }
+            const changeColor = function(x){
+                let result = document.getElementById('result');
+                result.classList.remove('text-red-500');
+                result.classList.remove('text-blue-500');
+                result.classList.add(x)
+            }
+            const enterName = function(){
+                let name = prompt('Please Enter Your Name: ');
+                let firstNameSpan = document.getElementById("firstName");
+                firstNameSpan.innerHTML = name;
+            }
+            const bouncer = function(){
+                let result = confirm("Are You Ready?")
+                if(result == true){
+                    alert ("Yes, You are Ready my Padawan");
+                }else{
+                         alert ("You not ready");
+                         window.location.replace('https://youtube.com')
+            }
+        }
+        bouncer();
+        
+        </script>
+        <!-- begin code for the button appearance -->
+        <style>    
+            .btn{
+                padding: 10px;
+                background-color: blue;
+                color: #fff;
+            }
+        
+        /* end of code for button appearance */
+        </style>
+    </head>     
+    <body>
+        <div>
+        <button class="btn" onclick="balert('Hi!')">Say Hi!</button> 
+        <button class="btn" onclick="balert('Goodbye!')">Say goodbye!</button> 
+        </div>
+        <hr>
+        <button class="btn" onclick="addsTen(100)">Add Ten</button>
+        <button class="btn" onclick="changeColor('text-red-500')">Change result to blue</button>
+        <button class="btn" onclick="changeColor('text-blue-500')">Change result to red</button>
+        <div id='result' class="text-5xl text-red-500"></div>
+        <hr>
+        <button class="btn" onclick="enterName()">Enter Your Name</button>
+        <div class= text-6xl>  
+            Welcome to my page <span id="firstName"></span>
+        </div>
+    </body>
+</html>
