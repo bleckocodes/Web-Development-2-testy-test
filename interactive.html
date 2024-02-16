@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive JavaScript Page</title>
+    <style>
+        #interactiveDiv {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            cursor: pointer;
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            margin: 0 auto; /* Center the div horizontally */
+            border-radius: 10px; /* Rounded corners */
+        }
+    </style>
+</head>
+<body>
+    Click on the box
+    <div id="interactiveDiv">
+        Click me!
+    </div>
+
+    <script defer>
+        // Function to change the text of the div when clicked
+        document.getElementById('interactiveDiv').addEventListener('click', function() {
+            this.textContent = 'You clicked me!';
+        });
+
+        // Log a message to the console when the page loads
+        console.log('Page loaded.');
+
+        // Prompt the user for input and display it within the div
+        var userInput = prompt('Enter some text:');
+        document.getElementById('interactiveDiv').textContent = userInput;
+
+        // Function to change the background color of the div when hovered over
+        document.getElementById('interactiveDiv').addEventListener('mouseover', function() {
+            this.style.backgroundColor = 'lightgreen';
+        });
+
+        // Function to change the background color back when the mouse leaves the div
+        document.getElementById('interactiveDiv').addEventListener('mouseout', function() {
+            this.style.backgroundColor = 'lightblue';
+        });
+    </script>
+</body>
+</html>
